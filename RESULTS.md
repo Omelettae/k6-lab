@@ -21,13 +21,13 @@
 | ---- | ------------ | ----- | ----------- | --------- | --------- | ------  | -------- |
 | A1   | Smoke        | 1     | 0.551678/s  | 360.33ms  | 360.99ms  | 0.00%   | 100.00%  |
 | A2   | Average load | 3     | 1.34/s      | 370ms     | 805ms     | 0.0%    | 100.0%   |
-| A3   | Stress       | 5     |             |           |           |         |          |
+| A3   | Stress       | 5     | 2.3/s       | 360ms     | 827ms     | 0.0%    | 100.0%   |
 | A4   | Spike        | 5     |             |           |           |         |          |
 | A5   | Soak         | 2     |             |           |           |         |          |
 ## Part B
 1.
-2.
-3.
+2. Each virtual user sends one request per iteration, and an iteration lasts about 1.29 s. So one user sends about 0.78 requests/s x 5 users = 3.9 requests/s which is below 5.
+3. No, the response time didn't grow from the average-load test to the stress test. Which mean the system had not yet reached the point where response time starts to climb.
 4.
 5.
 6.
