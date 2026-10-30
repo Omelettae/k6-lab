@@ -10,6 +10,12 @@
     ✗ 'p(95)<0' p(95)=374.13ms
     exit code: 99
 - Step 0.8, what was wrong, and how the checks showed it:
+    ✗ no pepperoni
+      ↳  89% — ✓ 67 / ✗ 8
+    ✗ no knife needed
+      ↳  74% — ✓ 56 / ✗ 19
+    the problem was lowercase name ('pepperoni', 'knife')
+    one manual request might not have found it because it might not random into no pepperoni or no knife.
 ## Part A results
 | Step | Test type    | Users | Req/s | p(95) | Max | Failed | Checks |
 | ---- | ------------ | ----- | ----- | ----- | --- | ------ | ------ |
