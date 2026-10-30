@@ -29,8 +29,14 @@
 2. Each virtual user sends one request per iteration, and an iteration lasts about 1.29 s. So one user sends about 0.78 requests/s x 5 users = 3.9 requests/s which is below 5.
 3. No, the response time didn't grow from the average-load test to the stress test. Which mean the system had not yet reached the point where response time starts to climb.
 4. Around 40s (Request Rate at 21:20:46 spike to 2/s-2.8/s and drop back to 0.9/s at around 21:21:26)
-5.
-6.
-7.
-8.
-9.
+5. No, the response time and the error rate did not get worse over time. Memory leak is a defect that a soak test of several hours could reveal.
+6. p(95) catch slowdowns that the average miss.
+7. System in a lab could give different numbers because of latency from network.
+8. Sending requests with hundreds of users against a site can slow down the site and could consider denial-of-service attack.
+9. Vague requirement: Line man app should load quickly.
+   Testable requirement: With 50 users Line man app at the same time for 5 minutes, 95% of requests are answered within 2 seconds, 99% within 4 seconds, and fewer than 1% of requests fail.
+    thresholds: {
+        http_req_duration: ['p(95)<2000', 'p(99)<4000'],
+        http_req_failed: ['rate<0.01'],
+        checks: ['rate>0.99'],
+    },
