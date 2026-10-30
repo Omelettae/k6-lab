@@ -14,16 +14,16 @@
       ↳  89% — ✓ 67 / ✗ 8
     ✗ no knife needed
       ↳  74% — ✓ 56 / ✗ 19
-    the problem was lowercase name ('pepperoni', 'knife')
+    the problem was lowercase name ('pepperoni', 'knife'),
     one manual request might not have found it because it might not random into no pepperoni or no knife.
 ## Part A results
-| Step | Test type    | Users | Req/s | p(95) | Max | Failed | Checks |
-| ---- | ------------ | ----- | ----- | ----- | --- | ------ | ------ |
-| A1   | Smoke        | 1     |       |       |     |        |        |
-| A2   | Average load | 3     |       |       |     |        |        |
-| A3   | Stress       | 5     |       |       |     |        |        |
-| A4   | Spike        | 5     |       |       |     |        |        |
-| A5   | Soak         | 2     |       |       |     |        |        |
+| Step | Test type    | Users | Req/s       | p(95)     | Max       | Failed                | Checks                |
+| ---- | ------------ | ----- | ----------- | --------- | --------- | --------------------- | --------------------- |
+| A1   | Smoke        | 1     | 0.551678/s  | 360.33ms  | 360.99ms  | 0.00%  0 out of 18    | 100.00% 24 out of 24  |
+| A2   | Average load | 3     |             |           |           |                       |                       |
+| A3   | Stress       | 5     |             |           |           |                       |                       |
+| A4   | Spike        | 5     |             |           |           |                       |                       |
+| A5   | Soak         | 2     |             |           |           |                       |                       |
 ## Part B
 1.
 2.
